@@ -85,7 +85,7 @@ window.DATA = {
   {
    "screen": "cockpit",
    "title": "Financing Enabled by CGC Guarantees",
-   "value": "RM 5.42 bn",
+   "value": "RM 6.42 bn",
    "delta": "+8.6% vs YTD 2025",
    "dir": "up",
    "status": "ok",
@@ -94,9 +94,9 @@ window.DATA = {
     "ILLUSTRATIVE TARGET",
     "DEMO DATA"
    ],
-   "note": "Approved RM 5.42bn · availed RM 4.11bn · outstanding RM 3.38bn",
+   "note": "Approved RM 6.42bn · availed RM 4.11bn · outstanding RM 3.38bn",
    "spark": 0,
-   "progress": "5.42 / target 7.4"
+   "progress": "6.42 / target 7.4"
   },
   {
    "screen": "cockpit",
