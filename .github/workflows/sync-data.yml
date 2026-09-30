@@ -1,0 +1,22 @@
+name: Sync data.js from Excel
+on:
+  push:
+    paths: ["CGC_Dashboard_Content.xlsx"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install openpyxl
+      - run: python build_data.py
+      - name: Commit updated data.js
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data.js
+          git diff --cached --quiet || (git commit -m "Sync data.js from Excel" && git push)
